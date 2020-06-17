@@ -1,6 +1,8 @@
 import React from 'react';
-import { Layout, Menu} from 'antd';
+import { Layout, Menu, Breadcrumb } from 'antd';
+import { Link } from 'react-router-dom';
 const  { Header, Content} = Layout;
+
 
 const CustomLayout = (props) => {
     return (
@@ -13,16 +15,15 @@ const CustomLayout = (props) => {
                     defaultSelectedKeys={['2']}
                     style={{ lineHeight: '64px' }}
                 >
-                    <Menu.Item key="1">Customer</Menu.Item>
-                    <Menu.Item key="2">Facility</Menu.Item>
+                    <Menu.Item key="1"><Link to="/register/">Customer</Link></Menu.Item>
+                    <Menu.Item key="2"><Link to="/">Facilities</Link></Menu.Item>
                 </Menu>
             </Header>
 
             <Content style={{ padding: '0 50px' }}>
-                {/* <Breadcrumb style={{ margin: '16px 0'}}>
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>List</Breadcrumb.Item>
-                </Breadcrumb> */}
+                <Breadcrumb style={{ margin: '16px 0'}}>
+                    <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
+                </Breadcrumb> 
                 <div style={{ background: '#fff', padding: 24, minHeight:280 }}>
                     {props.children}
                 </div>

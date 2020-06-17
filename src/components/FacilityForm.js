@@ -33,7 +33,7 @@ class FacilityForm extends React.Component {
 
     handleFormSubmit = (event) => {
         const contact_name =  event.target.elements.contact_name.value;
-        const contact_business_name = event.target.elements.contact_name.value;
+        const contact_business_name = event.target.elements.contact_business_name.value;
         const contact_email = event.target.elements.contact_email.value;
         const contact_phone = event.target.elements.contact_phone.value;
         const business_type = event.target.elements.business_type.value;
