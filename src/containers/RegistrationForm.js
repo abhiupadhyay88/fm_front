@@ -1,12 +1,12 @@
 import React from 'react';
 import RegistrationForm from '../components/RegistrationForm';
 
-const RegistrationFormView = () => {
+const RegistrationFormView = (props) => {
     
     return (
         <div>
             <h2>Signup</h2>
-            <RegistrationForm />
+            <RegistrationForm {...props}/>
         </div>
     );
 };
